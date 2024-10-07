@@ -1,15 +1,16 @@
-/* General Styling */
-body {
+/* General Styles */
+body, html {
     margin: 0;
-    font-family: 'Georgia', sans-serif;
-    background-color: #f4f9f4; /* Soft background complementing the floral image */
-    color: #333;
-    line-height: 1.6;
-    background-image: url('floral.webp'); /* Use your chosen image */
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensures the background fits the width */
-    background-position: 60% center;
-    background-attachment: fixed; /* Keeps the background fixed as you scroll */
+    padding: 0;
+    height: 100%;
+    Width: 100%;
+    font-family: 'Georgia', serif;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    background-color: #efefef; 
+    overflow: hidden; /* Prevents scrolling */
 }
 
 /* NyghtSerif Bold Font */
@@ -28,138 +29,153 @@ body {
     font-style: normal;
 }
 
-/* NyghtSerif Dark Font */
-@font-face {
-    font-family: 'NySerif Dark';
-    src: url('fonts/NyghtSerif-Dark.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+/* Header Styles */
+.top-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #efefef;
+    z-index:1000; /* Make sure the header stays on top*/
+
 }
 
-/* NyghtSerif Dark Italic Font */
-@font-face {
-    font-family: 'NySerif DItalic';
-    src: url('fonts/NyghtSerif-DarkItalic.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+.top-header a {
+    margin: 0 20px;
+    color: #538F9F;
+    text-decoration: none;
+    font-family: 'Nyserif Bold', sans-serif;
+    font-size: 18px;
 }
 
-/* Gnomon Font - Foreground */
-@font-face {
-    font-family: 'Gnomon';
-    src: url('fonts/Gnomon-foreground.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.top-header a:hover {
+    text-decoration: underline;
 }
 
-/* Gnomon Font - Simple */
-@font-face {
-    font-family: 'Gnomon Simple';
-    src: url('fonts/Gnomon-simple.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+/* Main Content Styling */
+#main-content {
+    background-image: url('indexbg.webp'); /* Background image */
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure background covers the entire content */
+    background-position: center 40px; /* Keep image centered and offsets from the top */
+    background-attachment: fixed; /* Keep background fixed */
+    background-color: #e0f0e0; /* Matches background color to image */
+    width: 100%; /* Ensure content spans full width */
+    height: calc(100vh - 120px); /* Adjust to fill the screen below header */
+    padding-top: 50px; /* Prevent overlap with the header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-/* Monor Font - Regular */
-@font-face {
-    font-family: 'Monor';
-    src: url('fonts/Monor_Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+#main-content h1 {
+    font-size: 48px;
+    margin: 0;
 }
 
-/* Monor Font - Bold */
-@font-face {
-    font-family: 'Monor Bold';
-    src: url('fonts/monor-bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+#main-content h2 {
+    font-size: 24px;
+    color: #538F9F;
 }
 
+/* Tabs at the Bottom - Larger Buttons, Horizontal Layout */
+.tabs {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex; /* Align buttons horizontally */
+    justify-content: space-between; /* Evenly space the buttons */
+    padding: 0;
+    margin: 0;
+    border: 0; /* Ensure no border around the tabs container */
+    box-sizing: border-box; /* Include padding/border in element's width and height */
+}
 
-/* Hero Section */
-#hero {
-    height: 100vh; /* Full screen height */
+.tabs button {
+    flex-grow: 1; /* Make buttons take equal space */
+    padding: 60px;
+    font-family: 'Nyserif BItalic', sans-serif;
+    font-size: 36px;
+    background-color: #4C945D; /* Default green */
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin: 0; /* Remove any margin between buttons */
+    border-left: 0px solid white; /* Creates a clean dividing line */
+}
+
+.tabs button:first-child {
+    border-left: none; /* Remove left border for first button */
+}
+
+.tabs button:last-child {
+    border-right: none; /* Ensure the last button has no right border */
+}
+
+.tabs button:hover {
+    background-color: #4C945D;
+}
+
+/* Individual Button Colors */
+.tabs button:nth-child(1) {
+    background-color: #4C945D; /* Forest green */
+}
+
+.tabs button:nth-child(2) {
+    background-color: #6DAA75; /* Fern green shade */
+}
+
+.tabs button:nth-child(3) {
+    background-color: #8FBF8C; /* Moss shade */
+}
+
+.tabs button:nth-child(4) {
+    background-color: #A8C3A0; /* Soft Sage lighter */
+}
+
+/* Center the image on the page */
+.centered-image {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Move content higher up */
-    text-align: center;
-    color: #4caf50;
-    padding-top: 480px; /* Adjust this value to move content higher/lower */
+    align-items: center;
+    margin: 20px 0; /* Optional: Add some space around the image */
 }
 
-/* Main Title Styling */
-.main-title {
-    position: relative;
-    font-family: 'Monor Bold', sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #4caf50; /* Main color for Lucy & Logan */
+.centered-image img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
 }
 
-/* Overlay Text for "IRELAND 2025" */
-.overlay-text {
-    position: absolute;
-    top: -130px; /* Adjust this value to control the overlay position */
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'NySerif DItalic', serif; /* Different font for the overlay */
-    font-size: 120px;
-    font-weight: normal;
-    color: rgba(220, 233, 200, 0.911); /* Lighter, transparent green */
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+    }
+
+    .tabs button {
+        margin: 0px 0; /* Add margin between buttons on mobile */
+        font-size: 18px;
+    }
+    #main-content {
+        padding-top: 100px; /* Reduce padding for smaller screens */
+        text-align: center; /* Change text alignment if desired */
+    }
+
+    #main-content h1 {
+        font-size: 36px; /* Smaller font size for mobile */
+    }
+
+    #main-content h2 {
+        font-size: 18px;
+    }
 }
 
-/* Hero Section Paragraphs */
-.hero-content p {
-    font-size: 24px;
-    margin: 5px 0;
-}
 
-/* About Us Section */
-#about-us {
-    background-color: rgba(255, 255, 255, 0.8); /* Light background for text readability */
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-}
 
-#about-us h2 {
-    font-family: 'Monor Bold', sans-serif;
-    font-size: 48px;
-    color: #4caf50;
-}
 
-#about-us p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 20px auto;
-}
 
-/* Save the Date Section */
-#save-the-date {
-    background-color: rgba(240, 250, 240, 0.9);
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-}
-
-#save-the-date h2 {
-    font-family: 'Monor Bold', sans-serif;
-    font-size: 48px;
-    color: #4caf50;
-}
-
-#save-the-date p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-/* Footer */
-footer {
-    background-color: #4caf50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}

@@ -3,53 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucy & Logan's Wedding</title>
+    <title>Lucy & Logan Wedding</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Main Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="main-title">
-                <span class="overlay-text">IRELAND 2025</span>
-                Lucy & Logan
-            </h1>
-        </div>
-    </section>
-    
+    <!-- Top Header with Navigation Links -->
+    <header class="top-header">
+       <!-- <a href="details.html">Details</a>
+        <a href="rsvp.html">RSVP</a>
+    -->
+        <a href="index.html">Home</a>
+       <!--
+        <a href="gallery.html">Gallery</a>
+        <a href="registry.html">Registry</a>-->
+    </header>
 
-    <!-- About Us Section -->
-    <section id="about-us">
-        <div class="container">
-            <h2>Our Story</h2>
-            <p>Once upon a time, in the bustling metropolis of Calgary, circa 2013, there lived a young engineer-in-training named Logan. Fresh off the assembly line, Logan was living the dream—making oil and gas money, crashing at a downtown bachelor pad with his wingman Shane, and fully embracing the fast-paced life of 17th Avenue. They were the kings of the concrete jungle, navigating the perils of happy hours, late-night eats, and questionable life decisions.
-
-                Meanwhile, across town, a bright-eyed, ambitious intern named Lucy was just starting her journey into the corporate world. Little did she know that fate (or HR) would assign her to Logan’s team. But let’s make one thing clear—it wasn’t love at first sight. Oh no, dear friends, far from it. Sparks did not fly. Cupid was apparently out of office. They worked side by side, and instead of setting hearts on fire, they were this close to trying to set each other up with their friends. Yes, you read that right—matchmaking. Lucy and Logan, future lovebirds, were busy playing "Cupid's Apprentice" for one another.
-                
-                Spoiler alert: their matchmaking attempts went as smoothly as a toddler driving a race car. Zero chemistry, zero matches, but plenty of awkwardness to go around.
-                
-                But then… something changed. Slowly, like the meticulous calculations in an engineering project (Logan could tell you all about that), a realization crept up on Lucy. She had a crush on Logan! Cue the dramatic music and inner turmoil. She didn’t want to ruin their friendship—what if Logan thought she was turning into a total weirdo by suddenly avoiding him? So, she did the only logical thing… she told him the truth.
-                
-                "Logan, I have a crush on you," she confessed, straight-faced but freaking out inside. "And I’m gonna need some space to get over it." Mic drop. Exit stage left.
-                
-                Logan, ever the engineer, needed a few days to process this new "data." But soon, the gears turned, the calculations aligned, and he came back with a surprising result: he felt the same way.
-                
-                And thus began the grand adventure! From matchmaking misfires to actually dating, from hilarious ups to unexpected downs, their relationship weathered everything. They laughed, they cried, they traveled the world—collecting memories across countries, celebrating firsts, and creating new experiences together.</p>
+    <!-- Main Content Section -->
+    <section id="main-content">
+       
+        <div id="content">
+            <div class="centered-image">
+                <img src="lllogo_index.png" alt="We're Getting Married" />
+            </div>
+            <h2>
+        <P>Welcome to our wedding website and yes, it is a bit empty at the moment.</P>
+        <P>For now, know that we're getting married and want to celebrate with you!</p>
+            <p>So stay tuned for more information and future updates.</P>
+        </h2>
         </div>
     </section>
 
-    <!-- Save the Date Section -->
-    <section id="save-the-date">
-        <div class="container">
-            <h2>Save the Date</h2>
-            <p>Mark your calendars for August 27 - 28, 2025!</p>
-            <p>Join us for our destination wedding in Slane, Ireland. We look forward to celebrating with you in this beautiful part of the world.</p>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Contact us: lucyloganwedding@example.com</p>
+    <!-- Tabs at the Bottom -->
+    <footer class="tabs">
+        <button onclick="showContent('our-story')">Our Story</button>
+        <button onclick="showContent('venue-details')">Venue</button>
+        <button onclick="showContent('save-date')">Save the Date</button>
+        <button onclick="showContent('contact')">Contact Us</button>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
