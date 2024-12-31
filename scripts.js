@@ -10,19 +10,19 @@ function showContent(section) {
     if (section === 'our-story') {
         content = `
                 <div class="centered-image">
-                    <img src="our_story.png" alt="Our Story Timeline">
+                    <img src="img/our_story.png" alt="Our Story Timeline">
                 </div>
             `;
     } else if (section === 'venue-details') {
         content = `
                 <div class="centered-image">
-                    <img src="our_venue.png" alt="Our Venue">
+                    <img src="img/our_venue.png" alt="Our Venue">
                 </div>
             `;        
     } else if (section === 'save-date') {
         content = `
                 <div class="centered-image">
-                    <img src="savethedate.png" alt="Save the Date">
+                    <img src="img/savethedate.png" alt="Save the Date">
                 </div>
             `;
     } else if (section === 'contact') {

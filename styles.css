@@ -59,7 +59,7 @@ body, html {
 
 /* Main Content Styling */
 #main-content {
-    background-image: url('indexbg.webp'); /* Background image */
+    background-image: url('img/indexbg.webp'); /* Background image */
     background-repeat: no-repeat;
     background-size: cover; /* Ensure background covers the entire content */
     background-position: center 40px; /* Keep image centered and offsets from the top */
