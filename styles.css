@@ -156,16 +156,40 @@ body, html {
 }
 
 /* Mobile Adjustments */
+
+/* Default - Show Desktop Nav, Hide Mobile Menu */
+.desktop-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mobile-menu {
+    display: none; /* Hidden by default */
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* Hide desktop links */
+    }
+
+    .mobile-menu {
+        display: block; /* Show dropdown on mobile */
+    }
+    
     .tabs {
         flex-direction: column; /* Stack buttons vertically on mobile */
     }
 
     .tabs button {
         margin: 0px 0; /* Add margin between buttons on mobile */
+        padding: 10px 0; /* Reduce vertical padding significantly */
         font-size: 12px;
         flex-grow: 0; /* Remove equal stretching for compact layout */
-        line-height: 1.2; /* Improve spacing within the text */
+        line-height: 1; /* Improve spacing within the text */
+        height: auto; /* Ensure natural height */
     }
     #main-content {
         padding-top: 100px; /* Reduce padding for smaller screens */
