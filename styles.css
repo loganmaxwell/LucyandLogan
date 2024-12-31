@@ -16,7 +16,7 @@ body, html {
 /* NyghtSerif Bold Font */
 @font-face {
     font-family: 'NySerif Bold';
-    src: url('fonts/NyghtSerif-Bold.otf') format('opentype');
+    src: url('Fonts/NyghtSerif-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,7 +24,7 @@ body, html {
 /* NyghtSerif Bold Italic Font */
 @font-face {
     font-family: 'NySerif BItalic';
-    src: url('fonts/NyghtSerif-BoldItalic.otf') format('opentype');
+    src: url('Fonts/NyghtSerif-BoldItalic.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -164,6 +164,8 @@ body, html {
     .tabs button {
         margin: 0px 0; /* Add margin between buttons on mobile */
         font-size: 12px;
+        flex-grow: 0; /* Remove equal stretching for compact layout */
+        line-height: 1.2; /* Improve spacing within the text */
     }
     #main-content {
         padding-top: 100px; /* Reduce padding for smaller screens */
