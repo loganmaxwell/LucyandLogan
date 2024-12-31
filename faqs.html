@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Lucy & Logan Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add specific styles for the translucent FAQ box */
+        .content-container {
+            max-width: 70%;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Makes the container scrollable */
+            max-height: 70%; /* Limit height to create scrolling */
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 20px;
+            font-family: 'georgia', sans-serif;
+        }
+
+        .content-table th, .content-table td {
+            padding: 12px 16px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .content-table th {
+            font-weight: bold;
+            color: #4caf50; /* Accent color for headings */
+        }
+
+        .content-table td {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Header with Navigation Links -->
+    <header class="top-header">
+        <a href="travel.html">Travel</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="index.html">Home</a>
+        <a href="events.html">Schedule/Events</a>
+        <a href="faqs.html">FAQs</a>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="main-content">
+        <div class="content-container">
+            <h2 style="text-align: center; color: #4caf50;">Frequently Asked Questions</h2>
+            <table class="content-table">
+                <tr>
+                    <th>Question</th>
+                    <th>Answer</th>
+                </tr>
+                <tr>
+                    <td><img src="placeholder-icon.png" alt="icon" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">
+                        How do I get to the destination?</td>
+                    <td>There are many ways to reach our wedding venue, but Dublin is the closest airport to fly into. Dublin Airport offers both direct and non-direct flights, making it a convenient hub for travelers. Alternatively, you can fly directly to a nearby country in Europe or the UK and take a short connecting flight to Dublin—this is often an economical option.
+                        From Dublin, there are several ways to reach the venue. Please take a look at our<a href="travel.html"> Travel</a>  page for more information.</td>
+                </tr>
+                <tr>
+                    <td><img src="placeholder-icon.png" alt="icon" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;">
+                        What should I wear to the wedding?</td>
+                    <td>We're hoping for an outdoor ceremony and an indoor dinner reception. As for attire, we recommend cocktail or formal attire—whatever suits your taste. To honor the bridal colors, we kindly ask you to avoid wearing white or red. Most importantly, pick something comfortable to dance and celebrate in—we know you’ll look fantastic!</td>
+                </tr>
+                <tr>
+                    <td>Will the ceremony and reception take place at the same location?</td>
+                    <td>Yes, both the ceremony and reception will be held on the same property. While we may move between spaces, you won’t need to drive, travel, or walk far. Everything is conveniently close together!</td>
+                </tr>
+                <tr>
+                    <td>What kind of weather should I plan for?</td>
+                    <td>Late August in Slane typically brings mild and pleasant weather, with daytime highs around 18–20°C and cooler evenings. However, Irish weather can be unpredictable, so we recommend bringing layers and a light jacket for the evening!</td>
+                </tr>
+                <tr>
+                    <td>Do I need to plan for a multi-day event?</td>
+                    <td>We’re planning a casual social the night before the wedding at a local pub for anyone who’s free and has arrived in Slane—this is completely optional. We understand the effort it takes to travel for us therefore there are no planned events after the wedding either, so you can enjoy your time in Ireland (or elsewhere) however you like. That said, we’ll be around and would love to plan informal meetups if others are interested.</td>
+                </tr>
+                <tr>
+                    <td>Can I bring a plus one?</td>
+                    <td>Yes, if your invitation includes a plus one. Please indicate this when <a href="rsvp.html"> RSVPing</a>.</td>
+                </tr>
+                <tr>
+                    <td>What if I have dietary restrictions?</td>
+                    <td>Don't worry, so do we, well, just Lucy. Please indicate your specific restrictions while <a href="rsvp.html"> RSVPing</a> and we'll make sure you are taken care of.</td>
+                </tr>
+                <tr>
+                    <td>Will there be transportation?</td>
+                    <td>Shuttle services will be provided from the hotel to the venue. Details to follow.</td>
+                </tr>
+                <tr>
+                    <td>Are kids welcome?</td>
+                    <td>We deeply appreciate the effort our friends are making to travel for us, and we understand if you need to bring your little ones along. However, we’d love for everyone to have a chance to relax and enjoy, so we encourage leaving the kids at home if possible. If needed, we’re happy to help arrange babysitting services, especially for the late hours.</td>
+                </tr>
+                <tr>
+                    <td>Do you have a wedding registry?</td>
+                    <td>The greatest gift for us is having our friends and loved ones join us to celebrate, and we truly appreciate the effort it takes to travel for our wedding. If you’d like to offer something more, we’re happy to accept contributions toward a wedding relief fund or our future honeymoon.</td>
+                </tr>
+                <tr>
+                    <td>What should I do if I have a last-minute change in plans?</td>
+                    <td>Up until the RSVP deadline, you can adjust your RSVP details directly. After that, we kindly ask that you let us know as soon as possible if your plans change. This helps us keep things running smoothly and communicate updates to our vendors. We completely understand that life happens, and we appreciate your help in keeping us informed!</td>
+                </tr>
+
+            </table>
+        </div>
+    </section>
+
+    <!-- Tabs at the Bottom -->
+    <footer class="tabs">
+        <button onclick="showContent('our-story')">Our Story</button>
+        <button onclick="showContent('venue-details')">Venue</button>
+        <button onclick="showContent('save-date')">Save the Date</button>
+        <button onclick="showContent('contact')">Contact Us</button>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
