@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy & Logan Wedding</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            const correctPassword = "ireland2025";
+            const storedPassword = localStorage.getItem("weddingSitePassword");
+
+            if (storedPassword !== correctPassword) {
+                window.location.replace("password.html");
+            } else {
+                document.documentElement.style.display = "block";
+            }
+        })();
+
+        function showContent(section) {
+            const contentDiv = document.getElementById('content');
+
+            // Clear existing content
+            contentDiv.innerHTML = '';
+
+            let content = '';
+
+            if (section === 'our-story') {
+                content = `
+                <div class="centered-image">
+                    <img src="img/our_story.png" alt="Our Story Timeline">
+                </div>
+            `;
+            } else if (section === 'venue-details') {
+                content = `
+                <div class="centered-image">
+                    <img src="img/our_venue.png" alt="Our Venue">
+                </div>
+            `;
+            } else if (section === 'save-date') {
+                content = `
+                <div class="centered-image">
+                    <img src="img/savethedate.png" alt="Save the Date">
+                </div>
+            `;
+            } else if (section === 'contact') {
+                content = `
+                <div class="centered-image">
+                    <p>Here are a few ways to contact us:</p>
+                    <p>Email: example@wedding.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+            `;
+            }
+
+            contentDiv.innerHTML = content;
+        }
+    </script>
 </head>
+
 <body>
-    <!-- Top Header with Navigation Links -->
     <header class="top-header">
         <nav class="desktop-nav">
             <a href="travel.html">Travel</a>
@@ -24,29 +76,23 @@
             <option value="faqs.html">FAQs</option>
         </select>
     </header>
-
-    <!-- Main Content Section -->
     <section id="main-content">
-       
         <div id="content">
             <div class="centered-image">
                 <img src="img/lllogo_index.png" alt="We're Getting Married" />
             </div>
             <h2>
-        <P>Welcome to our wedding website</P>
-        <P>For best viewing experience, we recommend desktop vs mobile</p>
-        </h2>
+                <p>Welcome to our wedding website</p>
+                <p>For best viewing experience, we recommend desktop vs mobile</p>
+            </h2>
         </div>
     </section>
-
-    <!-- Tabs at the Bottom -->
     <footer class="tabs">
         <button onclick="showContent('our-story')">Our Story</button>
         <button onclick="showContent('venue-details')">Venue</button>
         <button onclick="showContent('save-date')">Save the Date</button>
         <button onclick="showContent('contact')">Contact Us</button>
     </footer>
-
-    <script src="scripts.js"></script>
 </body>
+
 </html>

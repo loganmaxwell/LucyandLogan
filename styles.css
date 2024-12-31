@@ -1,19 +1,21 @@
 /* General Styles */
+/* Hide all HTML content by default to enable password check */
+html {
+    display: none;
+}
+
+/* Reset margins and padding for body and html */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    Width: 100%;
-    font-family: 'Georgia', serif;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    background-color: #efefef; 
-    overflow: hidden; /* Prevents scrolling */
+    width: 100%;
+    font-family: 'Georgia', serif; /* Set font style globally */
+    background-color: #efefef; /* Light gray background color */
+    overflow: hidden; /* Prevent scrolling */
 }
 
-/* NyghtSerif Bold Font */
+/* Custom font for bold style */
 @font-face {
     font-family: 'NySerif Bold';
     src: url('Fonts/NyghtSerif-Bold.otf') format('opentype');
@@ -21,7 +23,7 @@ body, html {
     font-style: normal;
 }
 
-/* NyghtSerif Bold Italic Font */
+/* Custom font for bold italic style */
 @font-face {
     font-family: 'NySerif BItalic';
     src: url('Fonts/NyghtSerif-BoldItalic.otf') format('opentype');
@@ -30,189 +32,266 @@ body, html {
 }
 
 /* Header Styles */
+/* Style for the top navigation header */
 .top-header {
-    position: fixed;
+    position: fixed; /* Keeps the header fixed at the top */
     top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    background-color: #efefef;
-    z-index:1000; /* Make sure the header stays on top*/
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding around the header */
+    background-color: #efefef; /* Light gray background */
+    z-index: 1000; /* Ensure the header stays above other content */
     display: flex; /* Use flexbox for layout */
-    justify-content: space-evenly; /* Evenly spaces links */
-    align-items: center; /* Centers items vertically */
-
+    justify-content: space-evenly; /* Evenly space navigation links */
+    align-items: center; /* Vertically align items in the header */
 }
 
+/* Style for navigation links */
 .top-header a {
-    margin: 0 20px;
-    color: #538F9F;
-    text-decoration: none;
-    font-family: 'Nyserif Bold', sans-serif;
-    font-size:large;
-    flex-shrink: 0; /* Prevent links from shrinking */
+    margin: 0 20px; /* Add horizontal margin between links */
+    color: #538F9F; /* Blue-green color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-family: 'NySerif Bold', sans-serif; /* Use bold font */
+    font-size: large; /* Set font size */
 }
 
+/* Add underline on hover for links */
 .top-header a:hover {
     text-decoration: underline;
 }
 
 /* Main Content Styling */
+/* Style for the main content area */
 #main-content {
-    background-image: url('img/indexbg.webp'); /* Background image */
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensure background covers the entire content */
-    background-position: center 40px; /* Keep image centered and offsets from the top */
-    background-attachment: fixed; /* Keep background fixed */
-    background-color: #e0f0e0; /* Matches background color to image */
-    width: 100%; /* Ensure content spans full width */
-    height: calc(100vh - 120px); /* Adjust to fill the screen below header */
-    padding-top: 50px; /* Prevent overlap with the header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    background-image: url('img/indexbg.webp'); /* Set background image */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    background-size: cover; /* Cover the entire area with the image */
+    background-position: center 40px; /* Center the image with slight vertical offset */
+    background-attachment: fixed; /* Keep background fixed on scroll */
+    background-color: #e0f0e0; /* Light green background for fallback */
+    width: 100%; /* Full width */
+    height: calc(100vh - 120px); /* Adjust height to fit below the header */
+    padding-top: 50px; /* Add padding to prevent overlap with header */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center align text */
 }
 
+/* Style for main headings */
 #main-content h1 {
-    font-size: x-large;
-    margin: 0;
+    font-size: x-large; /* Extra-large font size */
+    margin: 0; /* Remove default margin */
 }
 
+/* Style for secondary headings */
 #main-content h2 {
-    font-size: large;
-    color: #538F9F;
+    font-size: large; /* Large font size */
+    color: #538F9F; /* Blue-green color */
 }
 
-/* Tabs at the Bottom - Larger Buttons, Horizontal Layout */
+/* Tabs at the Bottom */
+/* Style for the tabs section at the bottom */
 .tabs {
-    position: absolute;
+    position: absolute; /* Position at the bottom */
     bottom: 0;
-    width: 100%;
+    width: 100%; /* Full width */
     display: flex; /* Align buttons horizontally */
-    justify-content: space-between; /* Evenly space the buttons */
-    padding: 0;
-    margin: 0;
-    border: 0; /* Ensure no border around the tabs container */
-    box-sizing: border-box; /* Include padding/border in element's width and height */
+    justify-content: space-between; /* Space buttons evenly */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: 0; /* Remove border */
+    box-sizing: border-box; /* Include padding and border in dimensions */
 }
 
+/* Style for individual tab buttons */
 .tabs button {
-    flex-grow: 1; /* Make buttons take equal space */
-    padding: 50px;
-    font-family: 'Nyserif BItalic', sans-serif;
-    font-size: xx-large;
-    background-color: #4C945D; /* Default green */
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    margin: 0; /* Remove any margin between buttons */
-    border-left: 0px solid white; /* Creates a clean dividing line */
+    flex-grow: 1; /* Ensure equal width for buttons */
+    padding: 50px; /* Add padding for larger clickable area */
+    font-family: 'NySerif BItalic', sans-serif; /* Use bold italic font */
+    font-size: xx-large; /* Extra-extra-large font size */
+    background-color: #4C945D; /* Default green color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    text-align: center; /* Center align button text */
+    margin: 0; /* Remove margin */
+    border-left: 0px solid white; /* Add visual division between buttons */
 }
 
+/* Remove left border for the first button */
 .tabs button:first-child {
-    border-left: none; /* Remove left border for first button */
+    border-left: none;
 }
 
+/* Remove right border for the last button */
 .tabs button:last-child {
-    border-right: none; /* Ensure the last button has no right border */
+    border-right: none;
 }
 
+/* Change background color on hover */
 .tabs button:hover {
-    background-color: #4C945D;
+    background-color: #45a049;
 }
 
 /* Individual Button Colors */
+/* Forest green color for the first button */
 .tabs button:nth-child(1) {
-    background-color: #4C945D; /* Forest green */
+    background-color: #4C945D;
 }
 
+/* Fern green shade for the second button */
 .tabs button:nth-child(2) {
-    background-color: #6DAA75; /* Fern green shade */
+    background-color: #6DAA75;
 }
 
+/* Moss shade for the third button */
 .tabs button:nth-child(3) {
-    background-color: #8FBF8C; /* Moss shade */
+    background-color: #8FBF8C;
 }
 
+/* Soft sage green for the fourth button */
 .tabs button:nth-child(4) {
-    background-color: #A8C3A0; /* Soft Sage lighter */
+    background-color: #A8C3A0;
 }
 
-/* Center the image on the page */
+/* Centered Image */
+/* Center image on the page */
 .centered-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0; /* Optional: Add some space around the image */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    margin: 20px 0; /* Add margin around the image */
 }
 
+/* Ensure responsive image dimensions */
 .centered-image img {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Limit width to container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block-level element for alignment */
+    margin: 0 auto; /* Center horizontally */
 }
 
 /* Mobile Adjustments */
-
-/* Default - Show Desktop Nav, Hide Mobile Menu */
+/* Style for navigation links on mobile */
 .desktop-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    z-index:1000; /* Make sure the header stays on top*/
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-evenly; /* Evenly spaces links */
-    align-items: center; /* Centers items vertically */
+    display: flex; /* Flex layout for desktop nav */
+    justify-content: space-evenly; /* Space links evenly */
+    align-items: center; /* Center align links vertically */
 }
 
+/* Hide dropdown menu by default */
 .mobile-menu {
-    display: none; /* Hidden by default */
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
+    display: none; /* Hidden initially */
+    width: 100%; /* Full width */
+    font-size: 16px; /* Set font size */
+    padding: 10px; /* Add padding */
 }
 
+/* Adjust styles for screens smaller than 768px */
 @media (max-width: 768px) {
     .desktop-nav {
-        display: none; /* Hide desktop links */
+        display: none; /* Hide desktop navigation on small screens */
     }
 
     .mobile-menu {
-        display: block; /* Show dropdown on mobile */
+        display: block; /* Show dropdown menu */
     }
-    
+
     .tabs {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: column; /* Stack buttons vertically */
     }
 
     .tabs button {
-        margin: 0px 0; /* Add margin between buttons on mobile */
-        padding: 10px 0; /* Reduce vertical padding significantly */
-        font-size: 12px;
-        flex-grow: 0; /* Remove equal stretching for compact layout */
-        line-height: 1; /* Improve spacing within the text */
-        height: auto; /* Ensure natural height */
+        margin: 0; /* Remove margin */
+        padding: 10px 0; /* Reduce vertical padding */
+        font-size: 12px; /* Smaller font size */
+        flex-grow: 0; /* Prevent equal stretching */
+        line-height: 1; /* Adjust line height */
+        height: auto; /* Use natural height */
     }
+
     #main-content {
-        padding-top: 100px; /* Reduce padding for smaller screens */
-        text-align: center; /* Change text alignment if desired */
+        padding-top: 100px; /* Adjust padding for smaller screens */
+        text-align: center; /* Center align text */
     }
 
     #main-content h1 {
-        font-size: 36px; /* Smaller font size for mobile */
+        font-size: 36px; /* Smaller heading font size */
     }
 
     #main-content h2 {
-        font-size: 18px;
+        font-size: 18px; /* Smaller secondary heading size */
     }
 }
 
+/* Password Page Styles */
+/* Style for the password input box */
+.password-box {
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding around the box */
+    background-color: white; /* White background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    border-radius: 10px; /* Rounded corners */
+}
 
+/* Style for the password input field */
+input[type="password"] {
+    padding: 10px; /* Add padding inside the input */
+    margin: 10px 0; /* Add vertical margin */
+    width: 80%; /* Set input width */
+    font-size: 16px; /* Set font size */
+}
 
+/* Style for buttons */
+button {
+    padding: 10px 20px; /* Add padding for size */
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
 
+/* Change background color on hover */
+button:hover {
+    background-color: #45a049;
+}
 
+/* FAQ Page Styles */
+/* Style for the FAQ container */
+.content-container {
+    max-width: 70%; /* Limit width for readability */
+    margin: 100px auto; /* Center container with margin */
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    padding: 20px; /* Add padding inside */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    max-height: 70%; /* Limit height */
+}
+
+/* Style for the FAQ table */
+.content-table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Remove gaps between cells */
+    font-size: 20px; /* Set font size */
+    font-family: 'Georgia', serif; /* Use serif font */
+}
+
+/* Style for table cells and headings */
+.content-table th, .content-table td {
+    padding: 12px 16px; /* Add padding inside cells */
+    text-align: left; /* Align text to the left */
+    vertical-align: top; /* Align content at the top */
+}
+
+/* Style for table headings */
+.content-table th {
+    font-weight: bold; /* Bold text */
+    color: #4caf50; /* Green color for headings */
+}
+
+/* Style for table data cells */
+.content-table td {
+    color: #333; /* Dark gray text color */
+}
