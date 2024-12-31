@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('img/indexbg.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+        }
+
+        .rsvp-box {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rsvp-box">
+        <h1>RSVP</h1>
+        <form id="rsvpForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <select id="plusOne" name="plusOne" required>
+                <option value="">Bringing a Plus One?</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <input type="text" id="plusOneName" name="plusOneName" placeholder="Plus One's Name (if applicable)">
+            <textarea id="dietary" name="dietary" placeholder="Dietary Restrictions"></textarea>
+            <input type="email" id="email" name="email" placeholder="Your Email (optional)">
+            <button type="button" onclick="submitRSVP()">Submit</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        // JavaScript function to handle RSVP form submission
+        function submitRSVP() {
+    const formData = {
+        name: document.getElementById('name').value,
+        plusOne: document.getElementById('plusOne').value,
+        plusOneName: document.getElementById('plusOneName').value,
+        dietary: document.getElementById('dietary').value,
+        email: document.getElementById('email').value,
+    };
+
+    fetch('https://script.google.com/macros/s/AKfycbytiPu0_2OwXq6kFufIas62Db6-qB10WUwlpTCMerXXSQuo_pK3MdxkcKosgNET9YTc/exec', { // Replace with your Web App URL
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById('responseMessage').innerText = data.message;
+        if (data.success) {
+            document.getElementById('rsvpForm').reset(); // Clear the form
+        }
+    })
+    .catch(error => {
+        document.getElementById('responseMessage').innerText = "Error submitting RSVP. Please try again.";
+        console.error('Error:', error);
+    });
+}
+
+
+    </script>
+</body>
+
+</html>
