@@ -49,7 +49,7 @@ body, html {
     color: #538F9F;
     text-decoration: none;
     font-family: 'Nyserif Bold', sans-serif;
-    font-size: 18px;
+    font-size:large;
     flex-shrink: 0; /* Prevent links from shrinking */
 }
 
@@ -75,12 +75,12 @@ body, html {
 }
 
 #main-content h1 {
-    font-size: 48px;
+    font-size: x-large;
     margin: 0;
 }
 
 #main-content h2 {
-    font-size: 24px;
+    font-size: large;
     color: #538F9F;
 }
 
@@ -99,9 +99,9 @@ body, html {
 
 .tabs button {
     flex-grow: 1; /* Make buttons take equal space */
-    padding: 60px;
+    padding: 50px;
     font-family: 'Nyserif BItalic', sans-serif;
-    font-size: 36px;
+    font-size: xx-large;
     background-color: #4C945D; /* Default green */
     color: white;
     border: none;
@@ -159,8 +159,15 @@ body, html {
 
 /* Default - Show Desktop Nav, Hide Mobile Menu */
 .desktop-nav {
-    display: flex;
-    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    z-index:1000; /* Make sure the header stays on top*/
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-evenly; /* Evenly spaces links */
+    align-items: center; /* Centers items vertically */
 }
 
 .mobile-menu {
