@@ -295,3 +295,52 @@ button:hover {
 .content-table td {
     color: #333; /* Dark gray text color */
 }
+
+/* Footer Section */
+.tabs {
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; /* Base color */
+    padding: 0px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    border: none;
+    outline: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-button:nth-child(1) {
+    background: #4caf50; /* Starting color */
+}
+.tab-button:nth-child(2) {
+    background: #66bb6a;
+}
+.tab-button:nth-child(3) {
+    background: #8bc34a;
+}
+.tab-button:nth-child(4) {
+    background: #a5d6a7;
+}
+.tab-button:nth-child(5) {
+    background: #c8e6c9; /* Ending color */
+}
+
+.tab-button:hover {
+    background: #388e3c; /* Dark green for hover effect */
+    color: #fff;
+}
+
+.tab-button:active {
+    transform: scale(0.95);
+}
