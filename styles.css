@@ -274,7 +274,7 @@ button:hover {
 .content-table {
     width: 100%; /* Full width */
     border-collapse: collapse; /* Remove gaps between cells */
-    font-size: 20px; /* Set font size */
+    font-size:medium; /* Set font size */
     font-family: 'Georgia', serif; /* Use serif font */
 }
 
