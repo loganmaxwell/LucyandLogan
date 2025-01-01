@@ -17,45 +17,6 @@
                 document.documentElement.style.display = "block";
             }
         })();
-
-        function showContent(section) {
-            const contentDiv = document.getElementById('content');
-
-            // Clear existing content
-            contentDiv.innerHTML = '';
-
-            let content = '';
-
-            if (section === 'our-story') {
-                content = `
-                <div class="centered-image">
-                    <img src="img/our_story.png" alt="Our Story Timeline">
-                </div>
-            `;
-            } else if (section === 'venue-details') {
-                content = `
-                <div class="centered-image">
-                    <img src="img/our_venue.png" alt="Our Venue">
-                </div>
-            `;
-            } else if (section === 'save-date') {
-                content = `
-                <div class="centered-image">
-                    <img src="img/savethedate.png" alt="Save the Date">
-                </div>
-            `;
-            } else if (section === 'contact') {
-                content = `
-                <div class="centered-image">
-                    <p>Here are a few ways to contact us:</p>
-                    <p>Email: example@wedding.com</p>
-                    <p>Phone: +1234567890</p>
-                </div>
-            `;
-            }
-
-            contentDiv.innerHTML = content;
-        }
     </script>
 </head>
 
@@ -87,13 +48,7 @@
             </h2>
         </div>
     </section>
-    <footer class="tabs">
-        <button onclick="location.href='index.html'" class="tab-button">Our Story</button>
-        <button onclick="location.href='travel.html'" class="tab-button">Venue</button>
-        <button onclick="location.href='events.html'" class="tab-button">Save the Date</button>
-        <button onclick="location.href='rsvp.html'" class="tab-button">RSVP</button>
-        <button onclick="location.href='contact.html'" class="tab-button">Contact Us</button>
-    </footer>
+    <script src="footer.js"></script>
 </body>
 
 </html>
