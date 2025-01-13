@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Lucy & Logan Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            const correctPassword = "ireland2025";
+            const storedPassword = localStorage.getItem("weddingSitePassword");
+
+            if (storedPassword !== correctPassword) {
+                window.location.replace("password.html");
+            } else {
+                document.documentElement.style.display = "block";
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Header with Navigation Links -->
+    <header class="top-header">
+        <nav class="desktop-nav">
+            <a href="travel.html">Travel</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="index.html">Home</a>
+            <a href="events.html">Schedule/Events</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <select class="mobile-menu" onchange="location = this.value;">
+            <option value="index.html" selected>Home</option>
+            <option value="travel.html">Travel</option>
+            <option value="accommodation.html">Accommodation</option>
+            <option value="events.html">Schedule/Events</option>
+            <option value="faqs.html">FAQs</option>
+        </select>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="main-content">
+        <div class="content-container">
+            <h2 style="text-align: center; color: #4caf50;">Travel Information</h2>
+            <table class="content-table">
+                <tr>
+                    <th>Planning your trip to Ireland for our wedding? We’ve gathered some tips and resources to make your journey as smooth as possible!</th>
+                </tr>
+                <tr>
+                    <td>How do I get to Ireland?
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        For most of our guests, flying into Dublin Airport (DUB) is the easiest and most convenient option. <b>Dublin</b> is Ireland’s largest international airport, located about 45 minutes from Slane and The Millhouse.
+                        <p><b>Flights from Canada</b></p>
+                        <p><li>Guests traveling from Calgary, Victoria, or Toronto can look for direct or one-stop flights to Dublin. Airlines like Air Canada, WestJet, and Aer Lingus often offer competitive rates. </li>
+                            <li>Alternatively, an <b>economical option</b> is to fly to a nearby European or UK city (e.g., London or Paris), which often has better flight deals from Canada with the same and other carriers as well. Once there, you can book a short connecting flight to Dublin with a lower-cost carrier.</li></p>
+                        <p>Some of our favourite resources to search for flight options are <a href="https://www.google.com/travel/flights/">Google Flights</a> and <a href="https://www.skyscanner.ca/">Skyscanner</a>. We'll also be keeping an eye out for flight deals and if we come across any we'll share it with you all. If you come across any good deals, please share it with us too!
+                        </p>
+                        <p><b>Flights from Europe or the UK</b></p>
+                        <p><li>
+                            For those traveling from London or Edinburgh, there are many affordable flights to Dublin. Airlines like Ryanair, Aer Lingus, and British Airways operate frequent routes.
+                        </li></p>
+                        <p><b>Cost-Saving Tips</b></p>
+                        <p><li>
+                            Low-Cost Carriers: Airlines like Ryanair and EasyJet offer budget-friendly fares, but be mindful of their baggage policies. Basic fares often don’t include checked luggage, and fees for additional bags can add up quickly.
+                        </li>
+                        <li>
+                            Full-Service Airlines: If you’re traveling light, British Airways offers reasonably priced flights between the UK and Ireland, with carry-on baggage included. This can be a better option to avoid surprise fees.
+                        </li>
+                    </p>
+                      
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>What’s the best way to get to Slane from Dublin?
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        Once you’ve landed at Dublin Airport, there are several ways to reach Slane and The Millhouse:
+                        <p><b>Driving or Car Rental</b></p>
+                        <p><li>Renting a car is a convenient way to travel and explore the Irish countryside. Car rental services are available at Dublin Airport, including Hertz, Enterprise, and Avis.</li>
+                            <li>Driving time from Dublin Airport to Slane is about 45 minutes to an hour.</li>
+                            <li>Remember: For those traveling from Canada, in Ireland, driving is on the left-hand side and driver & passenger side is also reversed (bigger difference for stick shift). Other things to mind are toll and traffic rules. For more information checkout <a href="https://www.ireland.com/en-ca/plan-your-trip/travel/driving-in-ireland/">Driving in Ireland</a></li>
+                        </p>
+                        <p><b>Private Hire or Taxi</b></p>
+                        <p><li>
+                            For a direct option, consider booking a taxi or private car hire.
+                        </li><li>Popular ride-hailing apps like Uber and Lyft are not widely available in Ireland; however, Dublin Airport does support Uber Black, which operates more like a private hire service.
+                        </li><li>
+                            Local apps like <a href="https://www.lynk.ie/">Lynk</a> or <a href="https://www.free-now.com/">Free Now</a> are reliable and easy to use for booking a ride from Dublin Airport to Slane.
+                        </li><li>
+                            Expect to pay approximately €80–€100 for the journey.
+                        </li><li>
+                            If you’re traveling with a group or coordinating with others, private car services or pre-booked shuttles may be a more cost-effective option.
+                        </li>
+                        </p>
+                        <p><b>Public Transportation</b></p>
+                        <p><li>
+                            Budget-conscious travelers can take a bus from Dublin to Slane via <a href="https://www.buseireann.ie/">Bus Éireann</a>. Check schedules and ticket prices online.
+                        </li>
+                        <li>
+                            Travel time by bus is approximately 1.5 to 2 hours.
+                        </li>
+                        </p>
+                        <p><b>Group Transport (TBD)</b></p>
+                        <p>After RSVP close, and travel plans from attendees become more firm, we may look into organizing group transportation. Details will be shared closer to the day of the event. If this is something you are interested in, please keep Logan or Lucy updated on your travel plans and dates.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Currency & Payment Tips
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><li><b>Currency:</b> Ireland uses the Euro (€). Most shops, restaurants, and services accept major credit and debit cards. Mind FX fees for card use.</li>
+                            <li><b>Cash:</b> While cards are widely accepted, it’s a good idea to have a small amount of cash for rural areas, local markets, or small establishments. ATMs are readily available in Dublin and Slane.</li>
+                            <li><b>Tipping:</b> Tipping in Ireland is optional but appreciated. In restaurants, leaving 10-15% of the bill is standard if service isn’t included. For taxis, rounding up to the nearest euro is common.</li>
+                            <li><b>Currency Exchange:</b> Currency Exchange: You can exchange money at banks, Dublin Airport, or currency exchange kiosks, but ATMs often provide the best exchange rates.</li>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile Phones and Connectivity
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><b>eSIMs for Easy Connectivity</b> 
+                            <li>For a hassle-free and affordable way to stay connected, consider using an eSIM. eSIMs eliminate the need for a physical SIM card and can be set up on your phone before you travel.</li>
+                            <li>Providers like Airalo and Holafly offer affordable eSIM packages for Ireland and even multi-country plans if you’re traveling to other European destinations.</li>
+                            <li>Benefits of eSIMs include <b>easy activation through an app</b>—no need to visit a store or swap out physical SIMs; Plans often include <b>generous data allowances</b>, perfect for navigation, social media, and staying in touch; and <b>multi-country packages</b> are ideal for exploring other countries before or after the wedding.</li>
+                        </p>
+                        <p><b>Wi-Fi Access</b> 
+                            <li>Wi-Fi is widely available in hotels, cafes, and public spaces in Ireland, so you can stay connected without using data.
+                                Download essential apps (like Google Maps) offline to minimize data usage.</li>
+                            <li>Wi-Fi will also be available at the wedding so you can stay connected while partying!</li>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Electrical Outlets
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><li><b>Plugs and Voltage:</b> Ireland uses Type G plugs (three rectangular pins) and operates on 230V/50Hz. If your devices use a different plug type or voltage, you’ll need an adapter or converter.</li>
+                            <li><b>Travel Tip:</b> Universal adapters with USB ports are a handy option for charging multiple devices.</li>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Emergency Numbers
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><li><b>In case of emergency:</b> The emergency services number in Ireland is <b>112</b> or <b>999</b> for police, fire, or medical assistance.</li>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ireland vs Northern Ireland
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><li><b>Ireland (Republic of Ireland):</b> Where Slane and The Millhouse are located. It uses the <b>Euro (€)</b> as its currency and follows Irish laws.</li>
+                            <li><b>Northern Ireland:</b> Part of the United Kingdom, located just north of the border with Ireland. It uses the <b>British Pound (£)</b> and follows UK laws.</li>
+                            <b>Driving Across the Border</b>
+                            <li><b>No Border Checks:</b> While there are no formal border checkpoints between Ireland and Northern Ireland, you’ll notice road signs and speed limits change.</li>
+                            <li><b>Speed Limits:</b> In Ireland, speed limits are in kilometers per hour (km/h), while in Northern Ireland, they’re in miles per hour (mph). Pay attention to these changes when crossing the border.</li>
+                            <li><b>Car Insurance:</b> If you’re renting a car, confirm with your rental company that your policy covers driving in both Ireland and Northern Ireland. Most companies include this, but it’s worth double-checking.</li>
+                            <li><b>Tolls:</b> Be aware of toll roads in Ireland, especially the M1 motorway, which connects Dublin to Northern Ireland. Some tolls accept both Euros and Pounds, but having Euros on hand is safer.</li>
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Any other tips for traveling in Ireland?
+                        <img src="icons/travel.png" alt="icon"
+                            style="width: 50px; height: 50px; margin-right: 5px; vertical-align: middle;">
+                    </td>
+                    <td>
+                        <p><li><b>Toll Roads:</b> If you’re driving, note that the M1 motorway to Slane has toll points. Most accept cash and cards.</li>
+                            <li><b>Navigation:</b> Download apps like Google Maps or Waze for directions.</li>
+                            <li><b>Pack Smart:</b> If using low-cost carriers, travel light to avoid baggage fees.</li>
+                            </p>
+                    </td>
+                </tr>
+            
+            </table>
+        </div>
+    </section>
+    <script src="footer.js"></script>
+</body>
+
+</html>
