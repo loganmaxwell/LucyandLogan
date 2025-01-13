@@ -4,7 +4,7 @@ document.write(`
         <button onclick="navigateAndShow('our-story')">Our Story</button>
         <button onclick="navigateAndShow('venue-details')">Venue</button>
         <button onclick="navigateAndShow('save-date')">Save the Date</button>
-        <button onclick="navigateAndShow('contact')">Contact Us</button>
+        <button onclick="location.href='rsvp.html'">RSVP</button>
     </footer>
 `);
 
@@ -29,7 +29,14 @@ function showContent(section) {
     } else if (section === 'save-date') {
         content = `<div class="centered-image"><img src="img/savethedate.png" alt="Save the Date"></div>`;
     } else if (section === 'contact') {
-        content = `<div class="centered-image"><img src="img/Contactus.png" alt="Contact Us"></div>`;
+        content = `
+            <div class="centered-image">
+                <p>Here are a few ways to contact us:</p>
+                <p>Email: lucylogan2025@gmail.com</p>
+                <p>Phone: +01 403 860 6164 (Logan)</p>
+                <p>Phone: +01 403 200 6081 (Lucy)</p>
+            </div>
+        `;
     }
     contentDiv.innerHTML = content;
 }
