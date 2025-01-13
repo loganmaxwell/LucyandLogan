@@ -25,7 +25,20 @@ function showContent(section) {
     if (section === 'our-story') {
         content = `<div class="centered-image"><img src="img/our_story.png" alt="Our Story Timeline"></div>`;
     } else if (section === 'venue-details') {
-        content = `<div class="centered-image"><img src="img/our_venue.png" alt="Our Venue"></div>`;
+        content = `
+        
+        <div class="centered-image">
+                <img src="img/our_venue.png" alt="Our Venue">
+                <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://goo.gl/maps/9s3n8PjJRhU9D2X59" target="_blank" 
+                           style="text-decoration: none; color: #007aff; font-weight: bold;">
+                            View on Google Maps
+                        </a>
+                    </p>
+                </div>
+            </div>
+        
+        `;
     } else if (section === 'save-date') {
         content = `
             <div class="centered-image">
