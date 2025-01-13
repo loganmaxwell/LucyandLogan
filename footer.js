@@ -3,7 +3,6 @@ document.write(`
     <footer class="tabs">
         <button onclick="navigateAndShow('our-story')">Our Story</button>
         <button onclick="navigateAndShow('venue-details')">Venue</button>
-        <button onclick="location.href='rsvp.html'">RSVP</button>
         <button onclick="navigateAndShow('save-date')">Save the Date</button>
         <button onclick="navigateAndShow('contact')">Contact Us</button>
     </footer>
@@ -30,13 +29,7 @@ function showContent(section) {
     } else if (section === 'save-date') {
         content = `<div class="centered-image"><img src="img/savethedate.png" alt="Save the Date"></div>`;
     } else if (section === 'contact') {
-        content = `
-            <div class="centered-image">
-                <p>Here are a few ways to contact us:</p>
-                <p>Email: example@wedding.com</p>
-                <p>Phone: +1234567890</p>
-            </div>
-        `;
+        content = `<div class="centered-image"><img src="img/Contactus.png" alt="Contact Us"></div>`;
     }
     contentDiv.innerHTML = content;
 }
