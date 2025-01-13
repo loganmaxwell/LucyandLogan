@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Lucy & Logan Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function () {
+            const correctPassword = "ireland2025";
+            const storedPassword = localStorage.getItem("weddingSitePassword");
+
+            if (storedPassword !== correctPassword) {
+                window.location.replace("password.html");
+            } else {
+                document.documentElement.style.display = "block";
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Top Header with Navigation Links -->
+    <header class="top-header">
+        <nav class="desktop-nav">
+            <a href="travel.html">Travel</a>
+            <a href="accommodation.html">Accommodation</a>
+            <a href="index.html">Home</a>
+            <a href="events.html">Schedule/Events</a>
+            <a href="faqs.html">FAQs</a>
+        </nav>
+        <select class="mobile-menu" onchange="location = this.value;">
+            <option value="index.html" selected>Home</option>
+            <option value="travel.html">Travel</option>
+            <option value="accommodation.html">Accommodation</option>
+            <option value="events.html">Schedule/Events</option>
+            <option value="faqs.html">FAQs</option>
+        </select>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="main-content">
+        <div class="content-container">
+            <h2 style="text-align: center; color: #4caf50;">Accommodation Information</h2>
+            <table class="content-table">
+                <tr>
+                    <th></th>
+                    <th>We can’t wait to celebrate with you at The Millhouse! To make your trip as seamless as possible, we’ve compiled information about staying onsite and nearby. Whether you’re interested in the convenience of staying with us at The Millhouse or exploring nearby options, we’ve got you covered.</th>
+                </tr>
+                <tr>
+                    <td><b>Staying at the Millhouse?</b>
+                        <p><img src="icons/travel_flight.png" alt="icon"
+                            style="width: 250px; height: 250px; margin-right: 5px; vertical-align: middle;">
+                        </p>
+                        </td>
+                    <td>
+                        We are thrilled to offer limited onsite accommodations at The Millhouse for our guests. Staying here means you’ll be right at the heart of the celebration, with no need to worry about transportation to and from the venue.
+                        <ul><li><b>Cost: </b> Rooms at The Millhouse range from approximately €XXX to €XXX per night.</li></ul>
+                        <b>Booking Process:</b>
+                        <ul><li>When you RSVP, you’ll have the option to indicate if you’re interested in staying onsite.</li>
+                        <li>Once RSVPs close, we’ll confirm availability and let you know whether we can accommodate your request.</li>
+                        </ul>
+                        <b>What if we're full?</b>
+                        <ul><li>If we’re unable to offer you a room onsite, don’t worry! There are many wonderful accommodations nearby (details below).</li>
+                        </ul>
+                      <b>Travel Tip:</b>  If you’re interested in staying onsite but want peace of mind about having a backup, we recommend booking an alternative option with free cancellation.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Nearby Accommodations</b>
+                        <p><img src="icons/travel_flight.png" alt="icon"
+                            style="width: 250px; height: 250px; margin-right: 5px; vertical-align: middle;">
+                        </p>
+                        </td>
+                    <td>
+                        For those not staying at The Millhouse, there are plenty of charming options in and near Slane Village to suit every style and budget. Here are a few recommendations:
+                        <ul><li><b>Cost: </b> Rooms at The Millhouse range from approximately €XXX to €XXX per night.</li></ul>
+                        <b>Booking Process:</b>
+                        <ul><li>When you RSVP, you’ll have the option to indicate if you’re interested in staying onsite.</li>
+                        <li>Once RSVPs close, we’ll confirm availability and let you know whether we can accommodate your request.</li>
+                        </ul>
+                        <b>What if we're full?</b>
+                        <ul><li>If we’re unable to offer you a room onsite, don’t worry! There are many wonderful accommodations nearby (details below).</li>
+                        </ul>
+                      <b>Travel Tip:</b>  If you’re interested in staying onsite but want peace of mind about having a backup, we recommend booking an alternative option with free cancellation.
+                    </td>
+                </tr>
+            
+            </table>
+        </div>
+    </section>
+    <script src="footer.js"></script>
+</body>
+
+</html>
