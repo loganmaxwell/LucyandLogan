@@ -23,7 +23,7 @@ function showContent(section) {
     contentDiv.innerHTML = '';
     let content = '';
     if (section === 'our-story') {
-        content = `<div class="centered-image"><img src="img/our_story.png" alt="Our Story Timeline"></div>`;
+        content = `<img src="img/our_story.png" alt="Our Story Timeline"></div>`;
     } else if (section === 'venue-details') {
         content = `
         
@@ -39,11 +39,13 @@ function showContent(section) {
         `;
     } else if (section === 'save-date') {
         content = `
+        <div class="centered-image">
         <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ASUMMARY:Lucy+%26+Logan%27s+Wedding%0ADTSTART:20250827T000000Z%0ADTEND:20250828T235900Z%0ADESCRIPTION:Save+the+date+for+Lucy+%26+Logan%27s+wedding+from+August+27+-+28,+2025.+Can%27t+wait+to+celebrate+with+you!%0ALOCATION:The+Millhouse,+Slane,+Co.+Meath,+Ireland%0AEND:VEVENT%0AEND:VCALENDAR" 
             download="Lucy_and_Logan_Wedding.ics"
             style="text-decoration: none;">
             <img src="img/savethedate.png" alt="Save the Date">
         </a>
+        </div>
         `;
 
     } else if (section === 'contact') {
