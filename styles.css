@@ -453,3 +453,13 @@ button:hover {
         height: calc(90vh - 160px);
     }
 }
+
+/* Generic utility classes */
+.text-center-margin {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
