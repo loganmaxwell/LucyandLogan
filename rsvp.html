@@ -8,90 +8,10 @@
     <title>RSVP</title>
     <link rel="stylesheet" href="styles.css">
     <script src="auth.js"></script>
-    <style>
-        /* General Styles */
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 90vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('img/background.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        header,
-        footer {
-            flex-shrink: 0; /* Prevent header/footer from shrinking */
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        header {
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        footer {
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        main {
-            flex: 1; /* Take up remaining space between header and footer */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            padding-bottom: 80px; /* Add padding to avoid footer overlap */
-        }
-
-        .rsvp-container {
-            max-width: 900px;
-            width: 100%;
-            height: 90%;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            margin: 20px 0; /* Add space between content and menus */
-        }
-
-        .rsvp-container iframe {
-            width: 100%;
-            height: calc(90vh - 140px); /* 90% of the viewport minus header/footer/padding */
-            border: none;
-            border-radius: 5px;
-        }
-
-        .rsvp-container .header {
-            font-size: 24px;
-            font-family: Georgia, serif;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #4caf50;
-            text-align: center;
-        }
-
-        .footer {
-            font-size: 14px;
-            color: #666;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 768px) {
-            .rsvp-container iframe {
-                height: calc(90vh - 160px); /* Adjust for smaller screens */
-            }
-        }
-    </style>
 </head>
 
-<body>
-    <header class="top-header">
+<body class="rsvp-page">
+    <header class="top-header rsvp-header">
         <nav class="desktop-nav">
             <a href="travel.html">Travel</a>
             <a href="accommodation.html">Accommodation</a>
@@ -110,7 +30,7 @@
         </select>
     </header>
 
-    <main>
+    <main class="rsvp-main">
         <div class="rsvp-container">
             <div class="header">
                 RSVP for Our Wedding
