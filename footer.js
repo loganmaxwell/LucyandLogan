@@ -1,12 +1,24 @@
-// Dynamically inject the footer
-document.write(`
-    <footer class="tabs">
-        <button onclick="navigateAndShow('our-story')">Our Story</button>
-        <button onclick="navigateAndShow('venue-details')">Venue</button>
-        <button onclick="navigateAndShow('save-date')">Save the Date</button>
-        <button onclick="location.href='rsvp.html'">RSVP</button>
-    </footer>
-`);
+// Dynamically build and append the footer
+document.addEventListener('DOMContentLoaded', function () {
+    const footer = document.createElement('footer');
+    footer.className = 'tabs';
+
+    const buttons = [
+        { text: 'Our Story', handler: () => navigateAndShow('our-story') },
+        { text: 'Venue', handler: () => navigateAndShow('venue-details') },
+        { text: 'Save the Date', handler: () => navigateAndShow('save-date') },
+        { text: 'RSVP', handler: () => { location.href = 'rsvp.html'; } }
+    ];
+
+    buttons.forEach(info => {
+        const btn = document.createElement('button');
+        btn.textContent = info.text;
+        btn.addEventListener('click', info.handler);
+        footer.appendChild(btn);
+    });
+
+    document.body.appendChild(footer);
+});
 
 // Function to navigate to the index page and show the desired section
 function navigateAndShow(section) {
