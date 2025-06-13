@@ -12,7 +12,7 @@ body, html {
     width: 100%;
     font-family: 'Georgia', serif; /* Set font style globally */
     background-color: #efefef; /* Light gray background color */
-    overflow: hidden; /* Prevent scrolling */
+    /* Removed overflow hidden to allow page scrolling */
 }
 
 /* Custom font for bold style */
@@ -70,7 +70,7 @@ body, html {
     background-attachment: fixed; /* Keep background fixed on scroll */
     background-color: #e0f0e0; /* Light green background for fallback */
     width: 100%; /* Full width */
-    height: calc(100vh - 120px); /* Adjust height to fit below the header */
+    min-height: calc(100vh - 120px); /* Ensure full screen height but allow content to expand */
     padding-top: 50px; /* Add padding to prevent overlap with header */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange content vertically */
@@ -214,6 +214,8 @@ body, html {
     #main-content {
         padding-top: 100px; /* Adjust padding for smaller screens */
         text-align: center; /* Center align text */
+        height: auto; /* Let content dictate height */
+        background-attachment: scroll; /* Better performance on mobile */
     }
 
     #main-content h1 {
@@ -222,6 +224,12 @@ body, html {
 
     #main-content h2 {
         font-size: 18px; /* Smaller secondary heading size */
+    }
+
+    .content-container {
+        max-width: 95%;
+        margin: 80px auto;
+        max-height: none;
     }
 }
 
