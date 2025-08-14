@@ -31,35 +31,6 @@ body, html {
     font-style: normal;
 }
 
-/* Header Styles */
-/* Style for the top navigation header */
-.top-header {
-    position: fixed; /* Keeps the header fixed at the top */
-    top: 0;
-    width: 100%; /* Full width */
-    text-align: center; /* Center align text */
-    padding: 20px; /* Add padding around the header */
-    background-color: #efefef; /* Light gray background */
-    z-index: 1000; /* Ensure the header stays above other content */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-evenly; /* Evenly space navigation links */
-    align-items: center; /* Vertically align items in the header */
-}
-
-/* Style for navigation links */
-.top-header a {
-    margin: 0 20px; /* Add horizontal margin between links */
-    color: #538F9F; /* Blue-green color for links */
-    text-decoration: none; /* Remove underline from links */
-    font-family: 'NySerif Bold', sans-serif; /* Use bold font */
-    font-size: large; /* Set font size */
-}
-
-/* Add underline on hover for links */
-.top-header a:hover {
-    text-decoration: underline;
-}
-
 /* Main Content Styling */
 /* Style for the main content area */
 #main-content {
@@ -71,7 +42,7 @@ body, html {
     background-color: #e0f0e0; /* Light green background for fallback */
     width: 100%; /* Full width */
     min-height: calc(100vh - 120px); /* Ensure full screen height but allow content to expand */
-    padding-top: 50px; /* Add padding to prevent overlap with header */
+    padding-top: 0; /* No additional padding now that header is removed */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange content vertically */
     justify-content: center; /* Center content vertically */
@@ -172,32 +143,8 @@ body, html {
     margin: 0 auto; /* Center horizontally */
 }
 
-/* Mobile Adjustments */
-/* Style for navigation links on mobile */
-.desktop-nav {
-    display: flex; /* Flex layout for desktop nav */
-    justify-content: space-evenly; /* Space links evenly */
-    align-items: center; /* Center align links vertically */
-}
-
-/* Hide dropdown menu by default */
-.mobile-menu {
-    display: none; /* Hidden initially */
-    width: 100%; /* Full width */
-    font-size: 16px; /* Set font size */
-    padding: 10px; /* Add padding */
-}
-
 /* Adjust styles for screens smaller than 768px */
 @media (max-width: 768px) {
-    .desktop-nav {
-        display: none; /* Hide desktop navigation on small screens */
-    }
-
-    .mobile-menu {
-        display: block; /* Show dropdown menu */
-    }
-
     .tabs {
         flex-direction: column; /* Stack buttons vertically */
     }
@@ -212,7 +159,7 @@ body, html {
     }
 
     #main-content {
-        padding-top: 100px; /* Adjust padding for smaller screens */
+        padding-top: 0; /* No top padding needed without header */
         text-align: center; /* Center align text */
         height: auto; /* Let content dictate height */
         background-attachment: scroll; /* Better performance on mobile */
