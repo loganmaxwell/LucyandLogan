@@ -31,6 +31,30 @@ body, html {
     font-style: normal;
 }
 
+/* Header Navigation */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.main-header nav a {
+    margin: 0 15px;
+    color: #4C945D;
+    text-decoration: none;
+    font-family: 'NySerif BItalic', sans-serif;
+    font-size: larger;
+}
+
+.main-header nav a:hover {
+    text-decoration: underline;
+}
+
 /* Main Content Styling */
 /* Style for the main content area */
 #main-content {
@@ -42,7 +66,7 @@ body, html {
     background-color: #e0f0e0; /* Light green background for fallback */
     width: 100%; /* Full width */
     min-height: calc(100vh - 120px); /* Ensure full screen height but allow content to expand */
-    padding-top: 0; /* No additional padding now that header is removed */
+    padding-top: 120px; /* Offset for fixed header */
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Arrange content vertically */
     justify-content: center; /* Center content vertically */
@@ -159,7 +183,7 @@ body, html {
     }
 
     #main-content {
-        padding-top: 0; /* No top padding needed without header */
+        padding-top: 120px; /* Offset for fixed header */
         text-align: center; /* Center align text */
         height: auto; /* Let content dictate height */
         background-attachment: scroll; /* Better performance on mobile */
