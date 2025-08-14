@@ -120,6 +120,13 @@ body, html {
     color: #538F9F; /* Blue-green color */
 }
 
+/* Photo gallery container */
+#photo-gallery {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
 /* Tabs at the Bottom */
 /* Style for the tabs section at the bottom */
 .tabs {
