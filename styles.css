@@ -31,28 +31,53 @@ body, html {
     font-style: normal;
 }
 
-/* Header Navigation */
-.main-header {
+/* Header Styles */
+.top-header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #efefef;
     z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.main-header nav a {
-    margin: 0 15px;
-    color: #4C945D;
+.top-header a {
+    margin: 0 20px;
+    color: #538F9F;
     text-decoration: none;
-    font-family: 'NySerif BItalic', sans-serif;
-    font-size: larger;
+    font-family: 'NySerif Bold', sans-serif;
+    font-size: large;
 }
 
-.main-header nav a:hover {
+.top-header a:hover {
     text-decoration: underline;
+}
+
+.desktop-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobile-menu {
+    display: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
 }
 
 /* Main Content Styling */

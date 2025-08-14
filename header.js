@@ -3,21 +3,46 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.createElement('header');
-    header.className = 'main-header';
+    header.className = 'top-header';
 
-    const nav = document.createElement('nav');
+    const desktopNav = document.createElement('nav');
+    desktopNav.className = 'desktop-nav';
 
-    const homeLink = document.createElement('a');
-    homeLink.href = 'index.html';
-    homeLink.textContent = 'Home';
+    const links = [
+        { href: 'travel.html', text: 'Travel' },
+        { href: 'accommodation.html', text: 'Accommodation' },
+        { href: 'index.html', text: 'Home' },
+        { href: 'photos.html', text: 'Photos' },
+        { href: 'events.html', text: 'Schedule/Events' },
+        { href: 'faqs.html', text: 'FAQs' },
+        { href: 'gifts.html', text: 'Gifts & Thanks' }
+    ];
 
-    const photosLink = document.createElement('a');
-    photosLink.href = 'photos.html';
-    photosLink.textContent = 'Photos';
+    links.forEach(link => {
+        const anchor = document.createElement('a');
+        anchor.href = link.href;
+        anchor.textContent = link.text;
+        desktopNav.appendChild(anchor);
+    });
 
-    nav.appendChild(homeLink);
-    nav.appendChild(photosLink);
-    header.appendChild(nav);
+    const mobileMenu = document.createElement('select');
+    mobileMenu.className = 'mobile-menu';
+    mobileMenu.addEventListener('change', function () {
+        location = this.value;
+    });
+
+    links.forEach(link => {
+        const option = document.createElement('option');
+        option.value = link.href;
+        option.textContent = link.text;
+        if (link.href === 'index.html') {
+            option.selected = true;
+        }
+        mobileMenu.appendChild(option);
+    });
+
+    header.appendChild(desktopNav);
+    header.appendChild(mobileMenu);
 
     // Insert header at the top of the body
     document.body.prepend(header);
