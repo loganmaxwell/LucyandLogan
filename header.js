@@ -1,5 +1,5 @@
 // Dynamically build and append the header navigation
-// Adds Home and Photos links
+// Includes only Home and Photos links
 
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.createElement('header');
@@ -9,13 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     desktopNav.className = 'desktop-nav';
 
     const links = [
-        { href: 'travel.html', text: 'Travel' },
-        { href: 'accommodation.html', text: 'Accommodation' },
         { href: 'index.html', text: 'Home' },
-        { href: 'photos.html', text: 'Photos' },
-        { href: 'events.html', text: 'Schedule/Events' },
-        { href: 'faqs.html', text: 'FAQs' },
-        { href: 'gifts.html', text: 'Gifts & Thanks' }
+        { href: 'photos.html', text: 'Photos' }
     ];
 
     const currentPage = location.pathname.split('/').pop();
