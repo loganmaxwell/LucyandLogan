@@ -271,6 +271,21 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Style anchor links as buttons */
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-link:hover {
+    background-color: #45a049;
+}
+
 /* FAQ Page Styles */
 /* Style for the FAQ container */
 .content-container {
