@@ -18,10 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
         { href: 'gifts.html', text: 'Gifts & Thanks' }
     ];
 
+    const currentPage = location.pathname.split('/').pop();
+
     links.forEach(link => {
         const anchor = document.createElement('a');
         anchor.href = link.href;
         anchor.textContent = link.text;
+        if (currentPage === link.href) {
+            anchor.classList.add('active');
+        }
         desktopNav.appendChild(anchor);
     });
 
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const option = document.createElement('option');
         option.value = link.href;
         option.textContent = link.text;
-        if (link.href === 'index.html') {
+        if (currentPage === link.href) {
             option.selected = true;
         }
         mobileMenu.appendChild(option);
